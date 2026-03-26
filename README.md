@@ -1,4 +1,4 @@
-# Laravel 11 透過快取整個回應來加速
+# Laravel 12 透過快取整個回應來加速
 
 引入 spatie 的 laravel-responsecache 套件來擴增透過快取整個回應來加速，預設情況下，它將快取全部傳回文字導向的內容（例如 `html` 和 `json`）的成功取得請求長達一週，這可能會大大加快回應速度。
 
@@ -16,9 +16,9 @@ $ composer install
 ```sh
 $ php artisan key:generate
 ```
-- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移。
+- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移，並執行資料庫填充（如果要測試的話）。
 ```sh
-$ php artisan migrate
+$ php artisan migrate --seed
 ```
 - 執行安裝 Vite 和 Laravel 擴充套件引用的依賴項目。
 ```sh
@@ -36,5 +36,5 @@ $ npm run build
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/JaLSUNn.png)
+![](https://i.imgur.com/HawIfz2.png)
 > 第一次請求進入套件時將儲存回應，然後再將其發送給使用者，當相同的請求再次出現時，只是使用已儲存的回應進行回應

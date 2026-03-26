@@ -17,7 +17,7 @@ return Application::configure(basePath: dirname(__DIR__))
             CacheResponse::class,
         ]);
         $middleware->alias([
-            'do.not.cache.response' => DoNotCacheResponse::class,
+            'do.not.cache.response' => DoNotCacheResponse::class
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

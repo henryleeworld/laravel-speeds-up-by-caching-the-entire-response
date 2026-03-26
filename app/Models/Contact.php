@@ -7,12 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contact extends Model
 {
+    /** @use HasFactory<\Database\Factories\ContactFactory> */
     use HasFactory;
 
     /**
      * The attributes that are mass assignable.
      *
-     * @var array<int, string>
+     * @var list<string>
      */
     protected $fillable = ['name', 'email'];
 }
